@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\TelegramBotController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::post('/telegram/webhook', [ TelegramBotController::class, 'telegramWebhook']);
-
+Route::post('/telegram/webhook', [TelegramBotController::class, 'webhook']);
+Route::post('/telegram/auth/login', [TelegramBotController::class, 'authLogin']);
